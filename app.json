@@ -8,7 +8,12 @@
     "scheme": "joyfeed",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.billy.dev.Joyfeed",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your library so you can choose your photo to upload.",
+        "NSCameraUsageDescription": "We need access to your camera so you can take photos."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +22,9 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.billy.dev.Joyfeed",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
     },
     "web": {
       "output": "static",
